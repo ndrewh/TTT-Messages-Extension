@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		491555451D186C60004DEAD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491555441D186C60004DEAD7 /* Assets.xcassets */; };
+		4915554C1D186C60004DEAD7 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4915554B1D186C60004DEAD7 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		491555511D186C60004DEAD7 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491555501D186C60004DEAD7 /* Messages.framework */; };
+		491555541D186C60004DEAD7 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491555531D186C60004DEAD7 /* MessagesViewController.swift */; };
+		491555571D186C60004DEAD7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491555551D186C60004DEAD7 /* MainInterface.storyboard */; };
+		491555591D186C60004DEAD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491555581D186C60004DEAD7 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4915554D1D186C60004DEAD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4915553B1D186C60004DEAD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4915554A1D186C60004DEAD7;
+			remoteInfo = MessagesExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		491555601D186C60004DEAD7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4915554C1D186C60004DEAD7 /* MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		491555411D186C60004DEAD7 /* TicTacToe-Messages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TicTacToe-Messages.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		491555441D186C60004DEAD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		491555461D186C60004DEAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4915554B1D186C60004DEAD7 /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		491555501D186C60004DEAD7 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		491555531D186C60004DEAD7 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		491555561D186C60004DEAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		491555581D186C60004DEAD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4915555A1D186C60004DEAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		491555481D186C60004DEAD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491555511D186C60004DEAD7 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4915553A1D186C60004DEAD7 = {
+			isa = PBXGroup;
+			children = (
+				491555431D186C60004DEAD7 /* TicTacToe-Messages */,
+				491555521D186C60004DEAD7 /* MessagesExtension */,
+				4915554F1D186C60004DEAD7 /* Frameworks */,
+				491555421D186C60004DEAD7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		491555421D186C60004DEAD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				491555411D186C60004DEAD7 /* TicTacToe-Messages.app */,
+				4915554B1D186C60004DEAD7 /* MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		491555431D186C60004DEAD7 /* TicTacToe-Messages */ = {
+			isa = PBXGroup;
+			children = (
+				491555441D186C60004DEAD7 /* Assets.xcassets */,
+				491555461D186C60004DEAD7 /* Info.plist */,
+			);
+			path = "TicTacToe-Messages";
+			sourceTree = "<group>";
+		};
+		4915554F1D186C60004DEAD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				491555501D186C60004DEAD7 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		491555521D186C60004DEAD7 /* MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				491555531D186C60004DEAD7 /* MessagesViewController.swift */,
+				491555551D186C60004DEAD7 /* MainInterface.storyboard */,
+				491555581D186C60004DEAD7 /* Assets.xcassets */,
+				4915555A1D186C60004DEAD7 /* Info.plist */,
+			);
+			path = MessagesExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		491555401D186C60004DEAD7 /* TicTacToe-Messages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 491555611D186C60004DEAD7 /* Build configuration list for PBXNativeTarget "TicTacToe-Messages" */;
+			buildPhases = (
+				4915553F1D186C60004DEAD7 /* Resources */,
+				491555601D186C60004DEAD7 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4915554E1D186C60004DEAD7 /* PBXTargetDependency */,
+			);
+			name = "TicTacToe-Messages";
+			productName = "TicTacToe-Messages";
+			productReference = 491555411D186C60004DEAD7 /* TicTacToe-Messages.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		4915554A1D186C60004DEAD7 /* MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4915555D1D186C60004DEAD7 /* Build configuration list for PBXNativeTarget "MessagesExtension" */;
+			buildPhases = (
+				491555471D186C60004DEAD7 /* Sources */,
+				491555481D186C60004DEAD7 /* Frameworks */,
+				491555491D186C60004DEAD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessagesExtension;
+			productName = MessagesExtension;
+			productReference = 4915554B1D186C60004DEAD7 /* MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4915553B1D186C60004DEAD7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Andrew H";
+				TargetAttributes = {
+					491555401D186C60004DEAD7 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 34XX7XT85R;
+						DevelopmentTeamName = "R Haberlandt";
+						ProvisioningStyle = Automatic;
+					};
+					4915554A1D186C60004DEAD7 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 34XX7XT85R;
+						DevelopmentTeamName = "R Haberlandt";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4915553E1D186C60004DEAD7 /* Build configuration list for PBXProject "TicTacToe-Messages" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4915553A1D186C60004DEAD7;
+			productRefGroup = 491555421D186C60004DEAD7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				491555401D186C60004DEAD7 /* TicTacToe-Messages */,
+				4915554A1D186C60004DEAD7 /* MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4915553F1D186C60004DEAD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491555451D186C60004DEAD7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491555491D186C60004DEAD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491555591D186C60004DEAD7 /* Assets.xcassets in Resources */,
+				491555571D186C60004DEAD7 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		491555471D186C60004DEAD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491555541D186C60004DEAD7 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4915554E1D186C60004DEAD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4915554A1D186C60004DEAD7 /* MessagesExtension */;
+			targetProxy = 4915554D1D186C60004DEAD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		491555551D186C60004DEAD7 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				491555561D186C60004DEAD7 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4915555B1D186C60004DEAD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4915555C1D186C60004DEAD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4915555E1D186C60004DEAD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewh.TicTacToe-Messages.MessagesExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4915555F1D186C60004DEAD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewh.TicTacToe-Messages.MessagesExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		491555621D186C60004DEAD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TicTacToe-Messages/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewh.TicTacToe-Messages";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		491555631D186C60004DEAD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TicTacToe-Messages/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewh.TicTacToe-Messages";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4915553E1D186C60004DEAD7 /* Build configuration list for PBXProject "TicTacToe-Messages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4915555B1D186C60004DEAD7 /* Debug */,
+				4915555C1D186C60004DEAD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4915555D1D186C60004DEAD7 /* Build configuration list for PBXNativeTarget "MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4915555E1D186C60004DEAD7 /* Debug */,
+				4915555F1D186C60004DEAD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		491555611D186C60004DEAD7 /* Build configuration list for PBXNativeTarget "TicTacToe-Messages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491555621D186C60004DEAD7 /* Debug */,
+				491555631D186C60004DEAD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4915553B1D186C60004DEAD7 /* Project object */;
+}
