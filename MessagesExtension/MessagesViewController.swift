@@ -9,7 +9,7 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController {
+class MessagesViewController: MSMessagesAppViewController, GameViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +24,10 @@ class MessagesViewController: MSMessagesAppViewController {
     // MARK: - Conversation Handling
     
     override func willBecomeActive(with conversation: MSConversation) {
-        // Called when the extension is about to move from the inactive to active state.
-        // This will happen when the extension is about to present UI.
+        super.willBecomeActive(with: conversation)
         
-        // Use this method to configure the extension and restore previously stored state.
+        // Present the view controller appropriate for the conversation and presentation style.
+        presentViewController(for: conversation, with: presentationStyle)
     }
     
     override func didResignActive(with conversation: MSConversation) {
@@ -61,12 +61,103 @@ class MessagesViewController: MSMessagesAppViewController {
         // Called before the extension transitions to a new presentation style.
     
         // Use this method to prepare for the change in presentation style.
+        
+        // This should present custom UI for the tic-tac-toe game
+        presentViewController(for: activeConversation!, with: presentationStyle)
+        
     }
     
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         // Called after the extension transitions to a new presentation style.
-    
         // Use this method to finalize any behaviors associated with the change in presentation style.
+    }
+    
+    @IBAction func startNewGame() {
+        requestPresentationStyle(.expanded)
+    }
+    
+    private func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
+        removeChildVCs()
+        if presentationStyle == .expanded {
+            let fullVC = storyboard!.instantiateViewController(withIdentifier: GameViewController.storyboardIdentifier) as! GameViewController
+            // If they just tapped on a message, use that message, otherwise, create a new Game
+            let game = Game(message: conversation.selectedMessage) ?? Game()
+            fullVC.game = game
+            fullVC.delegate = self
+            
+            // Check if the message was received or sent. We should only allow interacting with games when it's our turn
+            // This is broken in iOS 10 Beta 1.
+
+//            if (conversation.localParticipantIdentifier == conversation.selectedMessage?.senderParticipantIdentifier) {
+//                fullVC.allowMove = false
+//            }
+            
+            // Show the VC
+            addChildViewController(fullVC)
+            fullVC.view.frame = view.bounds
+            view.addSubview(fullVC.view)
+        }
+    }
+    
+    private func removeChildVCs() {
+        // Remove any existing child controllers.
+        for child in childViewControllers {
+            child.willMove(toParentViewController: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParentViewController()
+        }
+    }
+    
+    func createMessage(from game: Game, with image: UIImage?, winner: PositionState?) -> MSMessage {
+        var components = URLComponents()
+        components.queryItems = game.queryItems
+        
+        let layout = MSMessageTemplateLayout()
+        layout.image = image
+        
+        if winner != nil {
+            layout.caption = "\(winner!.rawValue) has won the game"
+        } else if game.occupiedCount == 9 {
+            layout.caption = "It's a tie!"
+        } else {
+            layout.caption = "It's your turn!"
+        }
+        
+        let message = MSMessage(session: game.session)
+        message.url = components.url!
+        message.layout = layout
+        
+        return message
+    }
+    
+    // MARK: GameViewControllerDelegate
+    
+    func playMade(using gameViewController: GameViewController, in game: Game, with winner: PositionState?, screenshot: UIImage?) {
+        // Create the message
+        let message = createMessage(from: game, with: screenshot, winner: winner)
+        
+        // Compose a change description if appropriate
+        var changeDescription: String?
+        
+        let occupiedCount = game.occupiedCount
+        if occupiedCount == 1 {
+            changeDescription = "We started a game of Tic-Tac-Toe"
+        } else if winner != nil {
+            changeDescription = "\(winner!.rawValue) won a game of Tic-Tac-Toe"
+        } else if occupiedCount == 9 {
+            changeDescription = "We tied in a game of Tic-Tac-Toe"
+        }
+        
+        // Finally, insert the message for the user to send
+        activeConversation!.insert(message, localizedChangeDescription: changeDescription) { error in
+            if let e = error {
+                print(e)
+            }
+        }
+        
+        // TODO: Save a record of the game
+        
+        dismiss() // Return to the keyboard...they are done with us.
     }
 
 }
