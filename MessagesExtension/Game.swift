@@ -23,7 +23,7 @@ enum PositionState: String {
 
 // Represents game state and much of the logic
 struct Game {
-    var board: [PositionState?] // count: 9
+    var board: [PositionState?] // count: 9. Having a 1D array as opposed to 2D simplifies enumerations given the simplicity of the game
     var session: MSSession
     
     init?(message: MSMessage?) {

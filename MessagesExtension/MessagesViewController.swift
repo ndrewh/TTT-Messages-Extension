@@ -108,7 +108,7 @@ class MessagesViewController: MSMessagesAppViewController, GameViewControllerDel
         }
     }
     
-    func createMessage(from game: Game, with image: UIImage?, winner: PositionState?) -> MSMessage {
+    private func createMessage(from game: Game, with image: UIImage?, winner: PositionState?) -> MSMessage {
         var components = URLComponents()
         components.queryItems = game.queryItems
         

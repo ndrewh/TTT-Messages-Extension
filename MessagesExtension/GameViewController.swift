@@ -71,7 +71,7 @@ class GameViewController: UIViewController {
     
     
     // @todo Fix this so that it only captures the portion of the view which holds the board (remove the topLabel.isHidden hack)
-    func screenshotBoard() -> UIImage? {
+    private func screenshotBoard() -> UIImage? {
         let squareSize = min(self.view.bounds.height, self.view.bounds.width)
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: squareSize, height: squareSize), true, 0.0)
